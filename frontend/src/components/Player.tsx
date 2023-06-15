@@ -1,6 +1,7 @@
 import React from 'react';
 
-interface PlayerProps {
+export interface PlayerProps {
+    id?: string;
   size: number;
   x: number;
   y: number;
@@ -20,8 +21,8 @@ const Player: React.FC<PlayerProps> = ({ size, x, y, name }) => {
 
   const nameStyle: React.CSSProperties = {
     position: 'absolute',
-    left: `${x}rem`,
-    top: `${y - size - 0.5}rem`, // Adjust the vertical position for the name tag
+    left: `${x - .5}rem`,
+    top: `${y - 2}rem`, // Adjust the vertical position for the name tag
     textAlign: 'center',
     fontWeight: 'bold',
   };
